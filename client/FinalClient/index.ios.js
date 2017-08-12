@@ -3,20 +3,18 @@ import {
   AppRegistry,
   StyleSheet,
   View,
-  Image,
+  Navigator,
 } from 'react-native';
 import { createStore } from 'redux';
 import { connect, Provider } from 'react-redux';
-import picBedroom from './images/try-again.png';
 import Login from './app/components/login/Login';
-
-
+import Register from './app/components/register/Register';
 
 
 export default class App extends Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       username: "",
       password: "",
@@ -26,9 +24,17 @@ export default class App extends Component {
 
   render() {
     return (
-      <Image source={picBedroom} style={styles.imageContainer}>
-        <Login />
-      </Image>
+        <Register />
+        // <Navigator
+        //   initialRoute={{ name: 'Login Page' }}
+        //   renderScene={(route, navigator) => {
+        //     switch (route.name) {
+        //       case 'Register Page'
+        //         return <Register />
+        //       default:
+        //         return <Login />
+        //     }
+        //   }}/>
     );
   }
 }

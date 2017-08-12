@@ -3,12 +3,12 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Button } from 'react-native-elements';
 
 
-const LoginButton = ({ onSelect=f=>f }) => {
+const RegisterButton = ({ onSelect=f=>f }) => {
   return (
     <TouchableOpacity style={styles.buttonContainer}>
       <View style={styles.button}>
         <Button
-        title="Login"
+        title="Register"
         onPress={onSelect}
         buttonStyle={{backgroundColor:"#F3623C", borderRadius:10}}
         />
@@ -23,9 +23,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "flex-end",
     width: "100%",
-    // backgroundColor: 'purple',
     marginBottom: 10,
-    marginTop: 20
+    marginTop: 20,
   },
   button: {
     flex: 1,
@@ -33,4 +32,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default LoginButton
+export default RegisterButton

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
-const LoginHeader = () => {
+const RegisterHeader = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.name}>
         Room & Board
       </Text>
       <Text style={styles.description}>
-        Login
+        Register
       </Text>
     </View>
   )
@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0)',
     fontWeight: '700',
     color: 'white'
-
   },
   container: {
     flex: 1,
@@ -34,8 +33,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: "center",
     color: 'white',
-    backgroundColor: 'rgba(0, 0, 0, 0)'
+    backgroundColor: "rgba(0, 0, 0, 0)"
   }
 })
 
-export default LoginHeader
+export default RegisterHeader

@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Alert, Navigator, Image } from 'react-native';
-import LoginForm from './LoginForm';
-import LoginHeader from './LoginHeader';
-import LoginButton from './LoginButton';
-import RegisterButton from './RegisterButton';
+import { StyleSheet, View, Alert, Navigator, Text, Image } from 'react-native';
 import picBedroom from '../../../images/homepageImg.png';
+import RegisterHeader from './RegisterHeader';
+import RegisterForm from './RegisterForm';
+import RegisterButton from './RegisterButton';
+import LoginButton from './LoginButton';
 
 
 
-export default class Login extends Component {
+export default class Register extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
+      name: "",
       username: "",
       password: "",
-      pendingLoginRequest: false
+      address: "",
+      pendingRegisterRequest: false
     }
   }
 
@@ -23,10 +25,10 @@ export default class Login extends Component {
     return (
       <Image source={picBedroom} style={styles.backgroundImage}>
       <View style={styles.container}>
-          <LoginHeader />
-          <LoginForm />
+          <RegisterHeader />
+          <RegisterForm />
+          <RegisterButton onSelect={() => Alert.alert('Register Button clicked')}/>
           <LoginButton onSelect={() => Alert.alert('Login Button clicked')}/>
-          <RegisterButton onSelect={() => Alert.alert('Register Button clicked')}/>        
       </View>
       </Image>
     )
