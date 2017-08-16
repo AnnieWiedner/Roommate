@@ -14,7 +14,7 @@ export default class Register extends Component {
     super(props)
     this.state = {
       name: "",
-      username: "",
+      email: "",
       password: "",
       address: "",
       pendingRegisterRequest: false

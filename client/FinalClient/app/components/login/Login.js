@@ -8,44 +8,50 @@ import picBedroom from '../../../images/homepageImg.png';
 
 
 
-export default class Login extends Component {
+const Login = () => {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      username: "",
-      password: "",
-      pendingLoginRequest: false
-    }
-  }
 
-  render() {
     return (
-      <Image source={picBedroom} style={styles.backgroundImage}>
-      <View style={styles.container}>
+      <Image source={picBedroom} style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
+        width: null,
+        height: null
+      }}>
+      <View style={{
+        flex: 1,
+        width: null,
+        height: null,
+        flexDirection: 'column'
+      }}>
           <LoginHeader />
           <LoginForm />
           <LoginButton onSelect={() => Alert.alert('Login Button clicked')}/>
-          <RegisterButton onSelect={() => Alert.alert('Register Button clicked')}/>        
+          <RegisterButton onSelect={() => Alert.alert('Register Button clicked')}/>
       </View>
       </Image>
     )
-  }
+
+    // const styles = StyleSheet.create({
+    //   container: {
+    //     flex: 1,
+    //     width: null,
+    //     height: null,
+    //     flexDirection: 'column'
+    //   },
+    //   backgroundImage: {
+    //     flex: 1,
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    //     backgroundColor: '#F5FCFF',
+    //     width: null,
+    //     height: null
+    //   }
+    // })
+
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: null,
-    height: null,
-    flexDirection: 'column'
-  },
-  backgroundImage: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-    width: null,
-    height: null
-  }
-})
+
+export default Login;
